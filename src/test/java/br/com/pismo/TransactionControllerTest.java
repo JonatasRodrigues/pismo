@@ -22,6 +22,8 @@ import org.springframework.web.context.WebApplicationContext;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import br.com.pismo.dto.TransactionDTO;
+import br.com.pismo.model.Account;
+import br.com.pismo.repository.AccountRepository;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = App.class)
@@ -32,10 +34,17 @@ public class TransactionControllerTest {
 	private WebApplicationContext webApplicationContext;
 
 	private MockMvc mockMvc;
+	
+	@Autowired
+	private AccountRepository repository;
 
 	@Before
 	public void setUp() {
 		mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
+		
+		Account account = new Account();
+    	account.setDocumentNumber("12345678900");
+    	repository.save(account);
 	}
 
 	@Test
