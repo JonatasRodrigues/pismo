@@ -1,4 +1,6 @@
+###### build
 [![CircleCI](https://circleci.com/gh/JonatasRodrigues/pismo.svg?style=svg)](https://circleci.com/gh/JonatasRodrigues/pismo)
+###### cobertura
 [![codecov](https://codecov.io/gh/JonatasRodrigues/pismo/branch/main/graph/badge.svg)](https://codecov.io/gh/JonatasRodrigues/pismo)
 
 # Pismo
